@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <base href="/chunmo-product-site/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#D3E6EF">
+  <meta name="description" content="春末夏初是一家产品公司。我们做鱼来哒与洗省省，让每次出发更从容，让每次清洁更简单。">
+  <meta name="keywords" content="春末夏初,CHUNMO XIACHU,鱼来哒,洗省省,自助洗车,钓点社区,产品公司">
+  <meta name="author" content="春末夏初">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://chunmoxiachu.github.io/chunmo-product-site/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="春末夏初 CHUNMO XIACHU">
+  <meta property="og:title" content="春末夏初｜让复杂的事，变得顺手。">
+  <meta property="og:description" content="鱼来哒与洗省省。两款产品，两个日常场景。">
+  <meta property="og:image" content="https://chunmoxiachu.github.io/chunmo-product-site/icons/Icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="春末夏初">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <title>春末夏初｜让复杂的事，变得顺手。</title>
+  <style>
+    :root { color-scheme: light; }
+    html, body { margin: 0; height: 100%; background: #d3e6ef; }
+    body {
+      font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: #111820;
+    }
+    #boot {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 72% 25%, rgba(255,255,250,.88), transparent 38%),
+        radial-gradient(ellipse at 28% 76%, rgba(255,255,255,.55), transparent 40%),
+        linear-gradient(135deg, #d7e9f1, #b9d3e1);
+      transition: opacity .35s ease, visibility .35s ease;
+    }
+    #boot.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    #boot::before {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background-image:
+        linear-gradient(rgba(17,24,32,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(17,24,32,.055) 1px, transparent 1px);
+      background-size: 8.3333vw 100%, 8.3333vw 100%;
+      mask-image: linear-gradient(to bottom, #000, transparent);
+    }
+    .boot-inner {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      transform: translateY(-4vh);
+    }
+    .boot-mark {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 10px;
+      background: #111820;
+      color: #d3e6ef;
+      font-size: 21px;
+      font-weight: 700;
+      box-shadow: 0 16px 45px rgba(41,74,98,.18);
+    }
+    .boot-name {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+    .boot-sub {
+      color: rgba(17,24,32,.5);
+      font: 9px/1.4 "Geist Mono", ui-monospace, monospace;
+      letter-spacing: .17em;
+    }
+    .boot-line {
+      width: 86px;
+      height: 1px;
+      margin-top: 3px;
+      overflow: hidden;
+      background: rgba(17,24,32,.15);
+    }
+    .boot-line::after {
+      display: block;
+      width: 40%;
+      height: 100%;
+      content: "";
+      background: #111820;
+      animation: boot-progress 1.2s ease-in-out infinite;
+    }
+    @keyframes boot-progress {
+      from { transform: translateX(-110%); }
+      to { transform: translateX(340%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .boot-line::after { animation: none; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div id="boot" aria-live="polite">
+    <div class="boot-inner">
+      <div class="boot-mark">春</div>
+      <div class="boot-name">春末夏初</div>
+      <div class="boot-sub">CHUNMO XIACHU</div>
+      <div class="boot-line"></div>
+    </div>
+  </div>
+  <noscript>
+    <div style="max-width:720px;margin:0 auto;padding:80px 24px">
+      <h1>春末夏初</h1>
+      <p>我们做鱼来哒与洗省省，让每次出发更从容，让每次清洁更简单。</p>
+      <p>请启用 JavaScript 浏览本站。</p>
+    </div>
+  </noscript>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      document.getElementById('boot')?.classList.add('is-hidden');
+    }, { once: true });
+    setTimeout(function () {
+      document.getElementById('boot')?.classList.add('is-hidden');
+    }, 9000);
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
